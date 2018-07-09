@@ -83,6 +83,7 @@ class Album extends Component {
                     }
                     <td className="song-title">{song.title}</td>
                     <td className="song-duration">{song.duration}</td>
+                    
                   </tr>
               )
             }
