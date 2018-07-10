@@ -123,19 +123,19 @@ class Album extends Component {
     return (
       <section className="album">
         <section id="album-info">
-          <img id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title}/>
+          <img className="covers" src={this.state.album.albumCover} alt={this.state.album.title}/>
           <div className="album-details">
             <h1 id="album-title">{this.state.album.title}</h1>
             <h2 className="artist">{this.state.album.artist}</h2>
             <div id="release-info">{this.state.album.releaseInfo}</div>
           </div>
         </section>
-        <table id="song-list">
-          <colgroup>
-            <col id="song-number-column" />
-            <col id="song-title-column" />
-            <col id="song-duration-column" />
-          </colgroup>
+          <table id="song-list">
+            <colgroup>
+              <col id="song-number-column" />
+              <col id="song-title-column" />
+              <col id="song-duration-column" />
+            </colgroup>
 
 
           <tbody>
@@ -143,13 +143,13 @@ class Album extends Component {
               this.state.album.songs.map( (song, index) =>
                   <tr className="song" key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={()=> this.handleMouseHover(song)} onMouseLeave={()=>this.handleHoverOff(song)}>
                     {
-                      this.state.isPlaying && this.state.currentSong === song ? (<button><span className="ion-pause"></span></button>)
-                      : this.state.hover === song ? (<button><span className="ion-play"></span></button>)
-                      : this.state.currentSong === song ? (<button><span className="ion-play"></span></button>)
+                      this.state.isPlaying && this.state.currentSong === song ? (<td className="ion-pause"></td>)
+                      : this.state.hover === song ? (<td className="ion-play"></td>)
+                      : this.state.currentSong === song ? (<td className="ion-play"></td>)
                       : (<td className="song-number">{song.number}{index+1}</td>)
                     }
                     <td className="song-title">{song.title}</td>
-                    <td className="song-duration">{song.duration}</td>
+                    <td className="song-duration">{this.formatTime(song.duration)}</td>
 
                   </tr>
               )

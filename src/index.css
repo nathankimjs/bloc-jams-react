@@ -1,5 +1,104 @@
+@font-face {
+  font-family: Milestone;
+  src: url(MilestoneFreeVersion-Script.otf);
+}
+
 body {
   margin: 0;
   padding: 0;
+  font-family: serif;
+  background-image: url("./blur_bg_3.jpg");
+  background-size: 300%;
+  background-position: top;
+}
+
+
+.material-icons { /* Dropdown */
+  color: white;
+}
+
+/* LANDING PAGE */
+.main-title { /* Bloc Jams */
+  font-family: Milestone;
+  font-size: 100px;
+  margin: 80px 80px 0px 80px;
+  color: white;
+}
+.hero-title { /* Turn the music up! */
+  font-size: 20px;
+  font-family: Courier;
+  color: white;
+  margin: 60px 50px 100px 50px;
+}
+.point h2 { /* Landing Features */
+  color: white;
+  font-family: Arial;
+  font-size: 40px;
+  margin: 50px 20px 10px 20px;
+}
+.point-description { /* Feature descriptions */
+  color: #eaedf2;
   font-family: sans-serif;
+  font-size: 15px;
+}
+
+/* ALBUM PAGE */
+.covers { /* Album covers */
+  margin: 80px 0px 20px 0px;
+  border-style: double;
+  border-color: white;
+}
+.album { /* all album-level details */
+  color: white;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+table { /* song table */
+  margin: 0 auto;
+}
+td {
+  padding: 0px 20px 0px 20px;
+}
+#release-info {
+  margin: 0px 0px 40px 0px;
+}
+#album-title {
+  margin: 0px 0px 0px 0px;
+  font-size:50px;
+}
+.artist {
+  margin: 0px 0px 0px 0px;
+  font-size: 20px;
+  font-family: serif;
+}
+.player-bar {
+  margin: 40px 0px -10px 0px;
+}
+
+/* LIBRARY PAGE */
+div {
+  color: white;
+  font-family: serif;
+  font-size: 15px;
+}
+.library-album-title {
+  font-size: 30px;
+  font-family: Arial;
+  margin: 10px;
+}
+
+/* FOOTER */
+.mdl-logo { /* Footer Bloc Jams */
+  font-family: sans-serif;
+  font-size: 20px;
+}
+.mdl-mini-footer{ /* Footer styling */
+  height: 100px;
+  background-color: black;
+  margin: 100px 0px 0px 0px;
+}
+.footer-link { /* Footer links */
+  color: white;
+  font-family: sans-serif;
+  font-size: 15px;
 }
