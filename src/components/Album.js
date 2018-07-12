@@ -106,16 +106,14 @@ class Album extends Component {
   }
 
   formatTime(s) {
-    if (isNaN(s)) {
-      (timeFormatted === "-:--")
-    }
+    let timeFormatted = "-:--";
     const seconds = Math.floor(s);
     const minutes = Math.floor(seconds/60);
     var secondsRemainder = seconds % 60;
     if (secondsRemainder < 10) {
       secondsRemainder = "0" + secondsRemainder;
     }
-    const timeFormatted = minutes + ":" + secondsRemainder;
+    timeFormatted = minutes + ":" + secondsRemainder;
     return timeFormatted;
   }
 
